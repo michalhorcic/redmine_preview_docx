@@ -24,8 +24,10 @@ Rails.configuration.to_prepare do
 
   # link patches
   require 'redmine_preview_office/patches/attachment_patch'
+	require 'redmine_preview_office/patches/dmsf_file_patch'
   require 'redmine_preview_office/patches/application_helper_patch'
   require 'redmine_preview_office/patches/attachments_controller_patch'
+	require 'redmine_preview_office/patches/dmsf_files_controller_patch'
   require 'redmine_preview_office/patches/admin_controller_patch'
   require 'redmine_preview_office/patches/thumbnail_patch'
 
