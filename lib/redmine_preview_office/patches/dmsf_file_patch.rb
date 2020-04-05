@@ -14,7 +14,7 @@ module RedminePreviewOffice
           def preview_office(options={})
             if is_office_doc?
 
-              target = File.join(self.class.thumbnails_storage_path, "#{id}_neconeco.pdf")
+              target = File.join(self.class.thumbnails_storage_path, "#{self.last_revision.id}.pdf")
 
               begin
                 Redmine::Thumbnail.generate_preview_office("#{self.last_revision.disk_file}", target)
